@@ -9,18 +9,23 @@ The dataset is taken from the website ‘kaggle.com’ which provides free-to-us
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/a6f63291-1545-4c9c-9e98-83ec04453d84)
 
 Figure 2.1: An example image for the buildings class from training set.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/5759305d-5433-4918-97a9-5c47936bdc66)
 
 Figure 2.2: An example image for the forest class from training set.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/3553be06-de60-4754-b018-882d64a765f5)
 
 Figure 2.3: An example image for the glacier class from training set.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/14a7d14c-bc7c-4152-a0bf-249e0b6fe139)
 
 Figure 2.4: An example image for the mountain class from training set.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/f0d54c57-115f-4d1f-805d-bce6023d9837)
 
 Figure 2.5: An example image for the sea class from training set.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/03c3020d-5a71-4c65-b050-eadb92a9c611)
 
 Figure 2.6: An example image for the street class from training set.
@@ -57,12 +62,15 @@ For the training options, ‘adam’ optimization method has been selected, afte
 In this part of the paper, the results of the machine learning model will be discussed. The training accuracy of the model was 73.73% after 7 epochs as can be observed in figure 4.3. The machine has been trained with 12 and 20 epochs as well. Figure 4.2 shows the training with 20 epochs, and it can be observed that the model starts to show the features of overfitting. In order to avoid overfitting, the epoch number is reduced to 12, which also shows some overfitting as well as can be observed from figure 4.1. It has been decided that after the 7th epoch, the machine learning model starts to memorize the dataset given, even though it gets shuffled every epoch. 
 As for the loss during the training, the mini-batch loss is 0.678, and the validation loss is 0.733. These values are taken from the output of the command window, after setting the ‘verbose’ option to true in the training options. 
 
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/0fb47fad-b029-4e38-a2c2-dafdb5bf18da)
 
 Figure 4.1: Training graph of 12 epochs.
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/c2f30a9e-57c9-430e-8bcf-032410d2d7b7)
 
 Figure 4.2: Training graph of 20 epochs. 
+
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/a3ca0250-8206-4b9f-bbdd-a128d1c0d3c2)
 
 Figure 4.3: Training graph with 7 epochs.
@@ -70,28 +78,35 @@ In figure 4.4 an example output of the machine learning model can be found. As m
 
 ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/7d2149c0-8b6e-4b4f-9dde-05bc070884f0)
 
+
  Figure 4.4: A result of randomly selected 6 images.
 
 For the accuracy metrics, the confusion matrix of the machine learning model can be found in figure 4.5. In the diagonal axis of the matrix, the true positive values can be observed. These true positive values represent the number of correctly predicted images during the training. It also can be said that the mountain and the buildings classes have the lowest accuracy among all classes. From that, we can assume that it is hard for the model to differentiate the mountains and buildings from other images. One of the ways to fix this issue could be increasing the number of images used during the training of these classes.
 
  ![image](https://github.com/Emreseker28/MATLAB-Image-Recognition/assets/54375145/60c5c8a7-ec89-409f-8988-f413d82fe748)
 
+
 Figure 4.5: Confusion matrix of the model. 
 
 There are a couple other metrics for accuracy that are being used in this project as well. In table 4.1 and table 4.2, the metrics that are being used in this project and their values can be found. 
 Table 4.1: Specificity and Precision values for each class.
 
-Metric\Class	1	2	3	4	5	6
-Specificity	0.927	0.981	0.932	0.917	0.937	0.972
-Precision	0.638	0.898	0.708	0.658	0.693	0.805
-F1-Score	0.723	0.723	0.723	0.723	0.723	0.723
+Metric\Class | 1	| 2 |	3 |	4 |	5 |	6
+--- | --- | --- | --- | --- | --- | --- |
+Specificity	| 0.927 |	0.981 |	0.932 |	0.917 |	0.937 |	0.972
+Precision |	0.638 |	0.898 |	0.708 |	0.658 |	0.693 |	0.805
+F1-Score |	0.723 |	0.723 |	0.723 |	0.723 |	0.723 |	0.723
+
 
 Table 4.2: Accuracy metrics and their values.
 
-Metric	Value
-Accuracy	0.908
-Recall	0.722
-Matthew’s Correlation Coefficient	0.669
+
+Metric | Value
+--- | --- |
+Accuracy | 0.908
+Recall | 0.722
+Matthew’s Correlation Coefficient |0.669
+
 
 Accuracy is a fundamental metric representing the overall correctness of the model's predictions. An accuracy of 0.908 implies that approximately 90.8% of the predictions made by the model are correct. 
 Recall, also known as sensitivity or true positive rate, measures the model's ability to correctly identify instances of a specific class. The average recall across all classes is 0.722, indicating that, on average, the model correctly identifies about 72.2% of instances for all classes.
